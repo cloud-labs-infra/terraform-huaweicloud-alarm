@@ -1,4 +1,4 @@
-# Module name
+# Huawei Cloud LTS Alarm
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
