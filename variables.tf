@@ -21,7 +21,7 @@ variable "level" {
 
 variable "keywords_requests" {
   description = "Specifies the keywords requests"
-  type        = object({
+  type = object({
     keywords               = string
     condition              = string
     number                 = number
@@ -42,7 +42,7 @@ variable "keywords_requests" {
 
 variable "frequency" {
   description = "Specifies the alarm frequency configurations"
-  type        = object({
+  type = object({
     type            = string
     fixed_rate_unit = string
     fixed_rate      = number
@@ -55,10 +55,10 @@ variable "frequency" {
 
 variable "notification_rule" {
   description = "Specifies the notification rule"
-  type        = object({
+  type = object({
     template_name = string
     user_name     = string
-    topics        = list(object({
+    topics = list(object({
       name      = string
       topic_urn = string
     }))

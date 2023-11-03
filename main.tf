@@ -1,6 +1,6 @@
 resource "huaweicloud_lts_keywords_alarm_rule" "alarm" {
-  name        = var.name
-  alarm_level = var.level
+  name               = var.name
+  alarm_level        = var.level
   send_notifications = var.send_notifications
   keywords_requests {
     keywords               = var.keywords_requests.keywords
