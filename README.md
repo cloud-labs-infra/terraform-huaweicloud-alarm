@@ -32,7 +32,7 @@ No modules.
 | <a name="input_level"></a> [level](#input\_level) | Specifies the alarm level | `string` | `"INFO"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Specifies the name of the keywords alarm rule | `string` | n/a | yes |
 | <a name="input_notification_rule"></a> [notification\_rule](#input\_notification\_rule) | Specifies the notification rule | <pre>object({<br>    template_name = string<br>    user_name     = string<br>    topics = list(object({<br>      name      = string<br>      topic_urn = string<br>    }))<br>  })</pre> | n/a | yes |
-| <a name="input_send_notifications"></a> [send\_notifications](#input\_send\_notifications) | Specifies whether to send notifications | `bool` | `"true"` | no |
+| <a name="input_send_notifications"></a> [send\_notifications](#input\_send\_notifications) | Specifies whether to send notifications | `bool` | `true` | no |
 
 ## Outputs
 
