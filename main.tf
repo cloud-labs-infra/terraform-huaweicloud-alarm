@@ -10,7 +10,6 @@ resource "huaweicloud_lts_keywords_alarm_rule" "alarm" {
     log_stream_id          = var.keywords_requests.log_stream_id
     search_time_range_unit = var.keywords_requests.search_time_range_unit
     search_time_range      = var.keywords_requests.search_time_range
-
   }
   frequency {
     type            = var.frequency.type

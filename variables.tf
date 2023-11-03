@@ -6,7 +6,7 @@ variable "name" {
 variable "send_notifications" {
   description = "Specifies whether to send notifications"
   type        = bool
-  default     = "true"
+  default     = true
 }
 
 variable "level" {
