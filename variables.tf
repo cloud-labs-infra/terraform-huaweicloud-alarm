@@ -3,6 +3,12 @@ variable "name" {
   type        = string
 }
 
+variable "name_postfix" {
+  description = "Name Postfix"
+  type        = string
+  default     = null
+}
+
 variable "send_notifications" {
   description = "Specifies whether to send notifications"
   type        = bool
