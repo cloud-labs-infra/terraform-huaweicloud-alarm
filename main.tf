@@ -1,3 +1,7 @@
+locals {
+  name = var.name_postfix == null ? var.name : format("%s-%s", var.name, var.name_postfix)
+}
+
 resource "huaweicloud_lts_keywords_alarm_rule" "alarm" {
   name               = var.name
   alarm_level        = var.level
