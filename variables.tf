@@ -77,6 +77,11 @@ variable "frequency" {
     condition     = contains(["CRON", "HOURLY", "DAILY", "WEEKLY", "FIXED_RATE"], var.frequency.type)
     error_message = "Frequency type is not one of: CRON, HOURLY, DAILY, WEEKLY, FIXED_RATE"
   }
+  default = {
+    type            = "FIXED_RATE"
+    fixed_rate_unit = "minute"
+    fixed_rate      = 5
+  }
 }
 
 variable "notification_rule" {
