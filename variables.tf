@@ -97,7 +97,7 @@ variable "notification_rule" {
   type = object({
     template_name = string
     user_name     = string
-    topics        = list(object({
+    topics = list(object({
       name      = string
       topic_urn = string
     }))
