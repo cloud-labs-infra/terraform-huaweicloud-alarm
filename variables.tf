@@ -26,7 +26,19 @@ variable "level" {
 }
 
 variable "keywords_requests" {
-  description = "Specifies the keywords requests"
+  description = <<DES
+  Specifies the keywords requests:
+  * `keywords` - Specifies the keywords
+  * `condition` - Specifies the keywords request condition. The value can be: >=, <=, < and >
+  * `number` - Specifies the line number
+  * `log_group_id` - Specifies the log group id
+  * `log_stream_id` - Specifies the log stream id
+  * `search_time_range_unit` - Specifies the unit of search time range. The value can be: minute and hour
+  * `search_time_range` - Specifies the search time range:
+    * When the search_time_range_unit is minute, the value ranges from 1 to 60
+    * When the search_time_range_unit is hour, the value ranges from 1 to 24
+  DES
+
   type = object({
     keywords               = string
     condition              = string
@@ -47,11 +59,19 @@ variable "keywords_requests" {
 }
 
 variable "frequency" {
-  description = "Specifies the alarm frequency configurations"
+  description = <<DES
+  Specifies the alarm frequency configurations:
+  * `type` - Specifies the frequency type. The value can be: CRON, HOURLY, DAILY, WEEKLY and FIXED_RATE
+  * `fixed_rate_unit` - Specifies the unit of search time range. The value can be: minute and hour
+  * `fixed_rate` - This parameter is used when type is set to FIXED_RATE. Specifies the search time range:
+    * When the fixed_rate_unit is minute, the value ranges from 1 to 60
+    * When the fixed_rate_unit is hour, the value ranges from 1 to 24
+  DES
+
   type = object({
     type            = string
-    fixed_rate_unit = string
-    fixed_rate      = number
+    fixed_rate_unit = optional(string)
+    fixed_rate      = optional(number)
   })
   validation {
     condition     = contains(["CRON", "HOURLY", "DAILY", "WEEKLY", "FIXED_RATE"], var.frequency.type)
@@ -60,11 +80,19 @@ variable "frequency" {
 }
 
 variable "notification_rule" {
-  description = "Specifies the notification rule"
+  description = <<DES
+  Specifies the notification rule:
+  * `template_name` - Specifies the notification template name
+  * `user_name` - Specifies the user name
+  * `topics` - Specifies the SMN topics:
+    * 'name' - Specifies the topic name
+    * 'topic_urn' - Specifies the topic URN
+  DES
+
   type = object({
     template_name = string
     user_name     = string
-    topics = list(object({
+    topics        = list(object({
       name      = string
       topic_urn = string
     }))
