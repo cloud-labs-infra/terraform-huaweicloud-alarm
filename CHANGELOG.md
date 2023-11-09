@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/compare/v1.1.0...v1.2.0) (2023-11-09)
+
+
+### Features
+
+* Update description and frequency default value ([#6](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/issues/6)) ([2ccf945](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/commit/2ccf9457c62ebbad79b36ece5b35ca0ae611074f))
+
 ## [1.1.0](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/compare/v1.0.0...v1.1.0) (2023-11-07)
 
 
