@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/compare/v1.2.0...v1.3.0) (2024-04-18)
+
+
+### Features
+
+* Update version of tf and providers ([#7](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/issues/7)) ([c1bbb78](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/commit/c1bbb783b1179dbb60a0b6239c077f135cfad3f9))
+
 ## [1.2.0](https://github.com/cloud-labs-infra/terraform-huaweicloud-alarm/compare/v1.1.0...v1.2.0) (2023-11-09)
 
 
